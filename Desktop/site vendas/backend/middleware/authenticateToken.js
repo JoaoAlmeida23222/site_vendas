@@ -1,6 +1,8 @@
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
-module.exports = function authenticateToken(req, res, next) {
+
+function authenticateToken(req, res, next) {
   const token = req.header("Authorization");
 
   if (!token) {
@@ -14,4 +16,8 @@ module.exports = function authenticateToken(req, res, next) {
   } catch (err) {
     res.status(400).json({ error: "Invalid token" });
   }
-};
+}
+
+module.exports = authenticateToken;  // ✅ Correct Export
+
+

@@ -4,6 +4,8 @@ const db = require('../config/db');
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+
+
 // We'll add our routes here
 router.post("/register", async (req, res) => {
     try {
@@ -38,38 +40,57 @@ router.post("/register", async (req, res) => {
 
 
   //Rota de login
-  router.post("/login", async (req, res) => {
+ 
+
+router.post("/login", async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        // Check if the user exists in the database
         const user = await db("users").where({ email }).first();
 
         if (!user) {
-            console.log("❌ User not found:", email);
             return res.status(400).json({ error: "User not found" });
         }
 
-        console.log("✅ Found user:", user);
-
-        // Debugging: Print the received password and the stored hash
-        console.log("🔹 Entered Password:", password);
-        console.log("🔹 Hashed Password in DB:", user.password);
-
-        // Compare the password with the hashed password
         const isPasswordValid = await bcrypt.compare(password, user.password);
-
-        console.log("🔍 Password Match:", isPasswordValid);
 
         if (!isPasswordValid) {
             return res.status(401).json({ error: "Senha inválida" });
         }
 
-        res.json({ message: "Login successful", user });
+        // 🔹 Generate JWT Token  
+        const token = jwt.sign(
+            { id: user.id, email: user.email }, // Payload  
+            process.env.JWT_SECRET, // Secret Key (replace with .env variable)  
+            { expiresIn: "1h" } // Token expiration  
+        );
+
+        res.json({ 
+            message: "Login successful", 
+            token, // 🔹 Include the token in the response  
+            user: { id: user.id, name: user.name, email: user.email } // Avoid sending the password  
+        });
     } catch (error) {
-        console.error("❌ Error in login:", error);
+        console.error("Error in login:", error);
         res.status(500).json({ error: "Server error" });
     }
 });
+
   
-  module.exports = router;
+const authenticateToken = (req, res, next) => {
+  const token = req.header("Authorization");
+
+  if (!token) {
+      return res.status(401).json({ error: "Access denied, no token provided" });
+  }
+
+  try {
+      const verified = jwt.verify(token.replace("Bearer ", ""), process.env.JWT_SECRET);
+      req.user = verified; // Attach user info to request
+      next();
+  } catch (error) {
+      res.status(400).json({ error: "Invalid token" });
+  }
+};
+
+module.exports = { router, authenticateToken };

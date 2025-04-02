@@ -3,8 +3,12 @@ const cors = require("cors");
 const morgan = require("morgan");
 const helmet = require("helmet");
 require("dotenv").config();
-const authRoutes = require("./routes/auth"); 
+
+
+const { router: authRoutes, authenticateToken } = require("./routes/auth");
 const productRoutes = require("./routes/products");
+const userRoutes = require("./routes/user");
+
 
 const app = express();
 
@@ -15,8 +19,14 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 app.use(helmet());
+
+
+// Rotas públicas (não precisam de autenticação)
 app.use("/api/auth", authRoutes);
-app.use("/products", productRoutes);
+
+// Rotas protegidas (exigem autenticação)
+app.use("/products", authenticateToken, productRoutes);
+app.use("/api/user", authenticateToken, userRoutes); 
 
 // Test route
 app.get("/", (req, res) => {

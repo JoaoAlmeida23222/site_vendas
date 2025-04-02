@@ -1,6 +1,7 @@
 const express = require("express");
 const knex = require("../config/db"); // Importa o banco de dados
-const authenticateToken = require("../middleware/authenticateToken"); // Middleware de autenticação
+const authenticateToken = require("../middleware/authenticateToken");
+ // Middleware de autenticação
 
 const router = express.Router();
 
@@ -85,5 +86,8 @@ router.delete("/:id", authenticateToken, async (req, res) => {
     res.status(500).json({ error: "Erro ao deletar produto" });
   }
 });
+
+
+
 
 module.exports = router;
