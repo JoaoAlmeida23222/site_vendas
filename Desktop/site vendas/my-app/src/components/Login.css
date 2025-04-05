@@ -1,0 +1,138 @@
+
+/* Estilos gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container principal */
+  .login-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #f3e8ff, #cce7ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Cartão de login */
+  .login-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+  }
+  
+  .login-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Logo */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    background: linear-gradient(to right, #6a4bff, #3b82f6);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Formulário de login */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Campos de entrada */
+  .input-group {
+    position: relative;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  
+  .input-field:focus {
+    border-color: #6a4bff;
+    box-shadow: 0 0 0 2px rgba(106, 75, 255, 0.2);
+  }
+  
+  /* Rótulo do campo */
+  .input-label {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    font-size: 12px;
+    color: #6b7280;
+    background-color: white;
+    padding: 0 5px;
+  }
+  
+  /* Botão de envio */
+  .login-button {
+    padding: 12px;
+    background: linear-gradient(to right, #6a4bff, #3b82f6);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .login-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .login-button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-button.loading {
+    background-color: #cccccc;
+  }
+  
+  /* Mensagem de erro */
+  .error-message {
+    color: #ff3b30;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* Link para cadastro */
+  .register-link {
+    text-align: center;
+    color: #6b7280;
+  }
+  
+  .register-link-text {
+    color: #6a4bff;
+    text-decoration: none;
+  }
+  
+  .register-link-text:hover {
+    text-decoration: underline;
+  }
