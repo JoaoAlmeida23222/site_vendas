@@ -23,9 +23,10 @@ app.use(helmet());
 
 // Rotas públicas (não precisam de autenticação)
 app.use("/api/auth", authRoutes);
+app.use("/products", productRoutes); // ✅
+
 
 // Rotas protegidas (exigem autenticação)
-app.use("/products", authenticateToken, productRoutes);
 app.use("/api/user", authenticateToken, userRoutes); 
 
 // Test route

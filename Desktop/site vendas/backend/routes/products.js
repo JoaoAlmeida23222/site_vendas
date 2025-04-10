@@ -26,20 +26,16 @@ router.post("/", authenticateToken, async (req, res) => {
 
 // 🔵 Listar todos os produtos
 // Rota para retornar todos os produtos com paginação
-router.get("/", authenticateToken, async (req, res) => {
-  // Recebe o número da página e o limite por página
+router.get("/", async (req, res) => {
   const { page = 1, limit = 10 } = req.query;
 
   try {
-    // Calcula o offset com base na página e limite
     const offset = (page - 1) * limit;
 
-    // Retorna os produtos com a paginação
     const products = await knex("products")
-      .limit(limit) // Limita o número de resultados por página
-      .offset(offset); // Pula os primeiros "offset" produtos
+      .limit(limit)
+      .offset(offset);
 
-    // Conta o total de produtos para facilitar a navegação
     const totalProducts = await knex("products").count("id as count");
 
     res.json({
@@ -52,6 +48,7 @@ router.get("/", authenticateToken, async (req, res) => {
     res.status(500).json({ error: "Erro ao listar produtos" });
   }
 });
+
 
 
 // 🟠 Atualizar um produto
