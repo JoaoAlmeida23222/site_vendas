@@ -4,7 +4,7 @@ import './Products.css';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom'; // ✅ add this
 import Footer from '../components/Footer';
-import { showSuccess, showError } from '../components/toastUtils'; // ✅ import toast utils
+import { showSuccess } from '../components/toastUtils'; // ✅ import toast utils
 
 const Products = () => {
   const [products, setProducts] = useState([]);
