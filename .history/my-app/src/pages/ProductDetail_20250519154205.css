@@ -1,0 +1,138 @@
+.product-detail-page {
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  color: #111;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.product-detail-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* === Left: Image === */
+.product-main-image {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-main-image img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* === Right: Info === */
+.product-detail-info {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.product-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e60023;
+  margin-bottom: 1.5rem;
+}
+
+/* === Quantity and Add to Cart === */
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-selector button {
+  background: #ddd;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-selector span {
+  font-size: 1.2rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+.add-to-cart-btn {
+  padding: 0.75rem 2rem;
+  background: #000;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: #333;
+}
+
+/* === Long Description === */
+.product-long-description {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 960px) {
+  .product-detail-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-main-image {
+    max-width: 90%;
+  }
+
+  .product-detail-info {
+    max-width: 90%;
+    align-items: center;
+  }
+
+  .product-long-description {
+    text-align: left;
+  }
+}

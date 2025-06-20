@@ -1,0 +1,119 @@
+.app-presentation-page {
+    background: #0a0a0a;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .app-hero {
+    text-align: center;
+    padding: 10rem 2rem 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .tag {
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  
+  .app-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .app-hero h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .highlight {
+    color: #ffffff;
+  }
+  
+  .subtext {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+  }
+  
+  .btn.ios {
+    background: #ffffff;
+    color: #000;
+  }
+  
+  .btn.android {
+    background: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .rating {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: #facc15;
+  }
+  
+  .phone-image {
+    margin-top: 3rem;
+  }
+  
+  .phone-image img {
+    width: 500px;
+    padding-top: 2rem;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.1));
+  }
+
+  .back-button {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    background: white;
+    border: 2px solid #ffffff;
+    color: #000000;
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: transparent
+    color: black;
+  }
+  

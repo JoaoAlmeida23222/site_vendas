@@ -1,0 +1,113 @@
+.navbar {
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.logo-img {
+  height: 125px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-menu-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  padding: 16px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.137);
+}
+
+.nav-auth {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.login-button,
+.register-button,
+.profile-link,
+.logout-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-button {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 700;
+}
+
+.login-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.register-button {
+  background: #ADD8E6;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 700;
+}
+
+.register-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.profile-link {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.profile-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.logo

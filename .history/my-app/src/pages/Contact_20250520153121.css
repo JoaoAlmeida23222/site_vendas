@@ -1,0 +1,90 @@
+.contact-page {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: white;
+}
+
+/* Hero section same as Products/About */
+.contact-hero {
+  height: 50vh;
+  background: url('https://wallpapers.com/images/hd/gym-background-3avpur3zeam79mrd.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.5rem;
+}
+
+.contact-card a {
+  font-size: 0.9rem;
+  color: #4da6ff;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}

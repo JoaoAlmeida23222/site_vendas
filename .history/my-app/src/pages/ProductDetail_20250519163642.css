@@ -1,0 +1,143 @@
+.product-detail-page {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1a1a1a;
+  color: #111;
+  min-height: 100vh;
+  padding-top: 6rem; /* spacing from navbar */
+  display: flex;
+  justify-content: center;
+}
+
+.product-detail-wrapper {
+  width: 100%;
+  height: ;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* === Left: Product Image === */
+.product-main-image {
+  flex: 1;
+  margin-top: 16px;
+  max-width: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.product-main-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* === Right: Product Info === */
+.product-detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.product-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quantity-selector {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.quantity-selector button {
+  background: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-selector span {
+  font-size: 1.2rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+.add-to-cart-btn {
+  padding: 0.75rem 2rem;
+  background: #000;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 32px;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #333;
+}
+
+.product-long-description {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .product-detail-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .product-main-image {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .product-detail-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-long-description {
+    text-align: left;
+  }
+}

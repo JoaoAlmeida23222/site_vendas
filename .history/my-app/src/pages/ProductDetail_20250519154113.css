@@ -1,0 +1,132 @@
+.product-detail-page {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0a0a0a;
+  color: #111;
+  padding: 10rem 2rem 3rem;
+  min-height: 100vh;
+}
+
+.product-detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  align-items: flex-start;
+  padding: 0 2rem;
+}
+
+/* Image */
+.product-main-image {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-main-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Info */
+.product-detail-info {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.product-subtitle {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.product-price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e60023;
+  margin-bottom: 1.5rem;
+}
+
+.product-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.quantity-selector {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.quantity-selector button {
+  background: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-selector span {
+  font-size: 1.2rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+.add-to-cart-btn {
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #333;
+}
+
+.product-long-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .product-detail-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .product-main-image {
+    justify-content: center;
+  }
+
+  .product-detail-info {
+    align-items: center;
+  }
+
+  .product-long-description {
+    text-align: left;
+  }
+}

@@ -1,0 +1,185 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-auth {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.login-button,
+.register-button,
+.profile-link,
+.logout-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: auto;
+  text-align: center;
+}
+
+.login-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.register-button {
+  background: white;
+  border: none;
+  color: black;
+  pa
+}
+
+.register-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.profile-link {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.profile-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.logout-button {
+  background: transparent;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  color: #ff4444;
+}
+
+.logout-button:hover {
+  background: rgba(255, 0, 0, 0.1);
+  border-color: rgba(255, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-auth {
+    gap: 0.5rem;
+  }
+
+  .login-button,
+  .register-button,
+  .profile-link,
+  .logout-button {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+} 
+
+.cart-link {
+  position: relative;
+  margin-left: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.cart-link:hover {
+  color: #f54370;
+}
+
+.cart-count {
+  background-color: #f54370;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  right: -10px;
+}
+
+@keyframes cartPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+.cart-link.pulse svg {
+  animation: cartPulse 0.3s ease-in-out;
+}
+
+.cart-link.disabled {
+  pointer-events: none; /* ❌ Can't click */
+  opacity: 0.5;          /* 👻 Faded out */
+  cursor: not-allowed;   /* 🚫 Shows forbidden cursor */
+}
+
+.cart-link.disabled {
+  pointer-events: auto; /* ✅ allow clicking for shake */
+  opacity: 0.5;
+  cursor: not-allowed;
+  transition: transform 0.3s ease;
+}
+
+.cart-link.disabled.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}

@@ -1,0 +1,130 @@
+.product-detail-page {
+  background: #0a0a0a;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+.product-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.product-images {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.product-info h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  color: #ff4d6d;
+}
+
+.product-detail-category {
+  font-size: 0.9rem;
+  color: #aaa;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.product-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #22c55e;
+  margin-bottom: 1.5rem;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.product-specs h2 {
+  font-size: 1.3rem;
+  color: #facc15;
+  margin-bottom: 1rem;
+}
+
+.product-specs ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.product-specs li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.add-to-cart-btn {
+  background: #ff4d6d;
+  color: white;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  text-transform: uppercase;
+}
+
+.add-to-cart-btn:hover {
+  background: #e60023;
+}
+
+@media (max-width: 768px) {
+  .product-detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-info h1 {
+    font-size: 2rem;
+  }
+
+  .product-price {
+    font-size: 1.6rem;
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

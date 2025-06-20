@@ -1,0 +1,93 @@
+.about-page {
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: #0a0a0a;
+}
+
+.about-hero {
+  height: 50vh;
+  background: url('https://wallpapercave.com/wp/wp12424948.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  
+}
+
+.about-hero .overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.mission-section {
+  padding: 4rem 2rem;
+  background-color: #0d0d0d;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mission-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.testimonials-section {
+  background-color: #1a1a1a;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: #262626;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  font-style: italic;
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #bbb;
+}

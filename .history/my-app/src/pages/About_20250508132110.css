@@ -1,0 +1,133 @@
+.about-page {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: white;
+}
+
+/* Hero section styled like Products page */
+.about-hero {
+  height: 50vh;
+  background: url('https://wallpapercave.com/wp/wp12424948.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.about-hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.about-hero .hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 4rem 2rem;
+  background-color: #111;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ff4d6d;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mission-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+
+/* Testimonials */
+.testimonials-section {
+  background-color: #1a1a1a;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ff4d6d;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 320px;
+  font-style: italic;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 30vh;
+  }
+
+  .about-hero .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-hero .hero-content p {
+    font-size: 1rem;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
